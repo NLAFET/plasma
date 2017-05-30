@@ -7,7 +7,7 @@
 # --------------------
 # programs
 
-CC        = gcc-6
+CC        = gcc
 
 ARCH      = ar
 ARCHFLAGS = cr
@@ -22,7 +22,7 @@ RANLIB    = ranlib
 FPIC      = -fPIC
 
 CFLAGS    = -fopenmp $(FPIC) -O3 -std=c99 -Wall -pedantic -Wshadow -Wno-unused-function
-LDFLAGS   = -fopenmp $(FPIC)
+LDFLAGS   = -fopenmp $(FPIC) tools/trace.o
 
 # options for MKL
 CFLAGS   += -DPLASMA_WITH_MKL \
